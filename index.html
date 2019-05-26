@@ -33,7 +33,7 @@
 
             <button class="start-quiz-button app-buttons">Let's Begin</button>
             <div class="luck">Good Luck!!!</div>
-        </section>
+        </section> <!--  End of Landing Page -->
 
         <section class="quiz-page" role="quiz questions">
             
@@ -48,7 +48,7 @@
 
             <form action="" class="quiz-question">
                 <div class="question">
-                    Which element has the symbol "Cu"?
+                    Which element has the symbol "Cu" in the preiodic table?
                 </div>
                 <div class="options">
                     <button class="options-list-item">
@@ -64,9 +64,31 @@
                         D. Nickel
                     </button>
                 </div>
-                <button class="submit-answer app-buttons">Submit Answer</button>
+                <button type="submit" class="submit-answer app-buttons">Submit Answer</button>
+                <div class="no-selection-error">
+                    Error: Please make one selection to proceed to the next question
+                </div>
             </form>
             
+        </section> <!-- End of Question Page-->
+
+        <section class="quiz-answer correct" role="answer">
+
+            <div class="answer-heading correct-answer">
+                inCorrect
+            </div>
+            <div class="answer">
+                    Pluto's planetary status has been subject to debate in recent years, but scientists do agree about its moons. Pluto has five moons - Charon, Styx, Nyx, Hydra, and Kerberos - which are named for figures associated with Pluto/Hades in Greek mythology.
+            </div>
+            <button class="next-question app-buttons">Continue</button>
+
+        </section> <!-- End of Answer Page-->
+
+
+        <section class="quiz-result" role="quiz result">
+
+
+
         </section>
 
 
