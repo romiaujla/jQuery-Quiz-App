@@ -155,7 +155,7 @@ html, body{
 
 /* Answer Page */
 .quiz-answer{
-    /*display:none;*/
+    display:none;
 }
 .correct{
     border: 2px solid #11998e;
@@ -181,4 +181,37 @@ html, body{
 .next-question{
     margin-top: 0px;
     margin-bottom: 30px;
+}
+
+/* Result Page */
+.quiz-result{
+    /*display:none;*/
+    width: 100%;
+}
+.result-heading{
+    font-size: 1.6rem;
+    text-transform:uppercase;
+}
+.overall-score{
+    margin-top: 20px;
+}
+.score-circle{
+    background: #11998e;
+    border-radius: 150px;
+    color: white;
+    width: 150px;
+    height: 150px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-weight: 800;
+    font-size: 1.6rem;
+}
+.score{
+    border-bottom: 2px solid white;
+    padding: 5px 0px 18px 0px;
+}
+.retake-text{
+    padding-top: 40px;
 }
