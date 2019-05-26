@@ -48,7 +48,7 @@ html, body{
     text-transform: uppercase;
 }
 .first-screen{
-    display: none;
+    /*display: none;*/
 }
 
 .quiz-info{
@@ -104,6 +104,7 @@ html, body{
 
 /* Quiz Page */
 .quiz-page{
+    display:none;
     width: 100%;
 }
 
