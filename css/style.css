@@ -48,20 +48,20 @@ html, body{
     text-transform: uppercase;
 }
 .first-screen{
-    /*display: none;*/
+    display: none;
 }
 
 .quiz-info{
-    font-size: 1em;
+    font-size: .85em;
     text-transform: uppercase;
     border-top: 2px solid salmon;
     padding: 25px 0px;
 }
 
 .instructions h3, .instruction-list{
-    font-size: .8em;
+    font-size: .7em;
     text-align: left;
-    line-height: 1.5em;
+    line-height: 1.8em;
 }
 
 .instruction-list{
@@ -86,11 +86,10 @@ html, body{
     color:white;
     border: none;
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 10px 40px;
     font-size: 1rem;
     text-transform: uppercase;
-    border-radius: 30px;
     font-weight: 800;
 }
 .app-buttons:hover{
@@ -104,7 +103,7 @@ html, body{
 
 /* Quiz Page */
 .quiz-page{
-    display:none;
+    /*display:none;*/
     width: 100%;
 }
 
@@ -125,4 +124,22 @@ html, body{
     font-size: 1.2rem;
     padding: 20px;
     font-weight:800;
+}
+.options-list-item{
+    width: 100%;
+    border: 1px solid salmon;
+    text-align: left;
+    margin: 10px 0px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.options-list-item:hover{
+    background: salmon;
+    color: white;
+}
+.options-list-item-selected{
+    background: seagreen;
+    color: white;
+    border: none;
 }
