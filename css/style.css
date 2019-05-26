@@ -48,9 +48,6 @@ html, body{
     font-size: 2.5em;
     text-transform: uppercase;
 }
-.first-screen{
-    display: none;
-}
 
 .quiz-info{
     font-size: .85em;
@@ -185,7 +182,7 @@ html, body{
 
 /* Result Page */
 .quiz-result{
-    /*display:none;*/
+    display:none;
     width: 100%;
 }
 .result-heading{
