@@ -8,8 +8,8 @@ function handlesBeginingTheQuiz(){
         //stop page from submitting and refreshing automatically
         event.preventDefault();
         console.log("Let's Begin Clicked");
-        $('.first-screen').css("display", "none");
-        $('.quiz-page').css("display", "block");
+        $('.first-screen').fadeOut(500);
+        $('.quiz-page').delay(500).fadeIn(500);
     });
 
 }
@@ -22,8 +22,8 @@ function handlesSubmitAnswer(){
 
         event.preventDefault();
         console.log("Submit Answer Clicked");
-        $('.quiz-page').css("display", "none");
-        $('.quiz-answer').css("display", "block");
+        $('.quiz-page').fadeOut(500);
+        $('.quiz-answer').delay(500).fadeIn(500);
 
     });
 
@@ -39,8 +39,8 @@ function handleContinueToNextQuestion(){
 
         event.preventDefault();
         console.log("Continue Button Clicked");
-        $('.quiz-answer').css("display", "none");
-        $('.quiz-result').css("display", "block");
+        $('.quiz-answer').fadeOut(500);
+        $('.quiz-result').delay(500).fadeIn(500);
 
     });
 
@@ -52,8 +52,8 @@ function handleRetakeQuiz(){
 
         event.preventDefault();
         console.log("Continue Button Clicked");
-        $('.quiz-result').css("display", "none");
-        $('.first-screen').css("display", "block");
+        $('.quiz-result').fadeOut(500);
+        $('.first-screen').delay(500).fadeIn(500);
 
     });
 }
