@@ -56,7 +56,7 @@ const QUIZDATA = [
         ],
         answer : "Periodic table",
         answertext : `The periodic table shows the symbols and atomic numbers of the known chemical elements. It also divides the elements into categories such as noble gases and metals.`
-    }
+    },
     {
         question : `Octopuses and squid are classified as what type of animal?`,
         options: [
