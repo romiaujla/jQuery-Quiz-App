@@ -36,11 +36,11 @@ fieldset{
     margin:auto;
     width:90%;
     height: 95%;
+    min-height: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /*border: 2px solid red;*/
 }
 
 /* Styling the first screen */
@@ -137,9 +137,6 @@ fieldset{
 .options-list-item:hover{
     background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
-}
-.options-list-item input{
-    /* display: none; */
 }
 .options-list-item-selected, .options-list-item-selected:hover{
     background: linear-gradient(to right, #11998e, #38ef7d);
