@@ -151,6 +151,33 @@ function handlesSubmitAnswer(){
 
 }
 
+//Returns the User a Text based on thier performance with the quiz
+function resultBasedText(){
+    if(score === 0)
+        return `Whoaaa!!! Did you do that on Purpose?? <br>
+                Why don't you give it a real try this time.`
+    
+    if(score >= 1 && score <= 4)
+        return `You can definitely do better <br>
+                Why not give it another try?`
+
+    if(score >=5 && score <=7)
+        return `You performance was decent <br>
+                But there is definitely room for improvement <br>
+                Want to try again?`
+
+    if(score >= 8 && score <=9)
+        return `You almost made it to Perfection <br>
+                Want to try again to get a perfect 10?`
+    
+    if(score === 10)
+        return `CONGRATULATIONS !!! You nailed the quiz <br>
+                It's a perfet 10 for you. <br>
+                Would you like to retake the quiz?`
+}
+
+//setting text for the result page with the 
+//score attained by the user.
 function getResultText(){
     return `<h1 class="result-heading">You Scored</h1>
                 
@@ -163,8 +190,7 @@ function getResultText(){
         </div>
     </div>
     <div class="retake-text">
-        You can do better <br>
-        Why Not Give it another try
+        ${resultBasedText()}
     </div>
     <button class="retake app-buttons">Retake Quiz</button>`;
 }
