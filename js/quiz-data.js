@@ -63,7 +63,7 @@ const QUIZDATA = [
             "Fish",
             "Arthopod",
             "Crustacean",
-            "Cephalpopd"
+            "Cephalopod"
         ],
         answer : "Cephalopod",
         answertext: `Sometimes fishermen colloquially call this class of animal "inkfish." There are currently over 800 known species of cephalopod.`
@@ -87,7 +87,7 @@ const QUIZDATA = [
             "Cyanopigments",
             "Chlorophyll"
         ],
-        answer : "Chloropyll",
+        answer : "Chlorophyll",
         answertext : `Photosynthesis, a vital process for plants, wouldn't be possible without chlorophyll. These green pigments help plants and algae absorb light.`
     },
     {
