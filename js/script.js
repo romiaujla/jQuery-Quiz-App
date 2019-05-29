@@ -26,27 +26,27 @@ function getQuestion(qNum){
             </div>
             <form action="" class="quiz-question">
                 <fieldset>
-            <label for="option-a" class="options-list-item" id="a">
-            <input type="radio" name="answer-option" id="option-a" value="${QUIZDATA[qNum].options[0]}" required>
-            A. <span class="option-text">${QUIZDATA[qNum].options[0]}</span>
-            </label>
-            <label for="option-b" class="options-list-item" id="b">
-            <input type="radio" name="answer-option" id="option-b" value="${QUIZDATA[qNum].options[1]}" required>
-            B. <span class="option-text">${QUIZDATA[qNum].options[1]}</span>
-            </label>
-            <label for="option-c" class="options-list-item" id="c">
-            <input type="radio" name="answer-option" id="option-c" value="${QUIZDATA[qNum].options[2]}" required>
-            C. <span class="option-text">${QUIZDATA[qNum].options[2]}</span>
-            </label>
-            <label for="option-d" class="options-list-item" id="d">
-            <input type="radio" name="answer-option" id="option-d" value="${QUIZDATA[qNum].options[3]}" required>
-            D. <span class="option-text">${QUIZDATA[qNum].options[3]}</span>
-            </label>
-            <button type="submit" class="submit-answer app-buttons">Submit Answer</button>
-            <div class="no-selection-error">
-            Error: Please make one selection to proceed to the next question
-            </div>
-            </fieldset>
+                    <label for="option-a" class="options-list-item" id="a">
+                    <input type="radio" name="answer-option" id="option-a" value="${QUIZDATA[qNum].options[0]}" required>
+                    <span class="option-text">${QUIZDATA[qNum].options[0]}</span>
+                    </label>
+                    <label for="option-b" class="options-list-item" id="b">
+                    <input type="radio" name="answer-option" id="option-b" value="${QUIZDATA[qNum].options[1]}" required>
+                    <span class="option-text">${QUIZDATA[qNum].options[1]}</span>
+                    </label>
+                    <label for="option-c" class="options-list-item" id="c">
+                    <input type="radio" name="answer-option" id="option-c" value="${QUIZDATA[qNum].options[2]}" required>
+                    <span class="option-text">${QUIZDATA[qNum].options[2]}</span>
+                    </label>
+                    <label for="option-d" class="options-list-item" id="d">
+                    <input type="radio" name="answer-option" id="option-d" value="${QUIZDATA[qNum].options[3]}" required>
+                    <span class="option-text">${QUIZDATA[qNum].options[3]}</span>
+                    </label>
+                    <button type="submit" class="submit-answer app-buttons">Submit Answer</button>
+                    <div class="no-selection-error">
+                    Error: Please make one selection to proceed to the next question
+                    </div>
+                </fieldset>
             </form>`
 
 }
@@ -90,7 +90,6 @@ function handleUserAnswerSelection(){
 
             //Sets the the selected answer value as per the users selection
             userAnswer = $(this).find('.option-text').text();
-            console.log(userAnswer);
         }
     });
 }
@@ -110,13 +109,17 @@ function getAnswerText(classTxt){
 //correct or incorrect 
 function renderAnswerPage(correct){
     let answerClassName = "correct";
-    if(!correct){
+    if(correct){
+        $('.quiz-answer').removeClass("incorrect");
+        $('.quiz-answer').addClass(answerClassName);
+    }else{
         answerClassName = "incorrect";
+        $('.quiz-answer').removeClass("correct");
+        $('.quiz-answer').addClass(answerClassName);
     }
     const answerPageText = getAnswerText(answerClassName);
 
     //this will add a correct / incorrect class to get the border for the correct color.
-    $('.quiz-answer').addClass(answerClassName);
     $('.quiz-answer').html(answerPageText);
     
 }
@@ -148,6 +151,29 @@ function handlesSubmitAnswer(){
 
 }
 
+function getResultText(){
+    return `<h1 class="result-heading">You Scored</h1>
+                
+    </div>
+    <div class="overall-score">
+        
+        <div class="score-circle">
+            <p class="score">${score}</p>
+            <p class="total-score">10</p>
+        </div>
+    </div>
+    <div class="retake-text">
+        You can do better <br>
+        Why Not Give it another try
+    </div>
+    <button class="retake app-buttons">Retake Quiz</button>`;
+}
+
+//add the HTML for hte result page 
+function renderQuizResult(){
+    const resulText = getResultText();
+    $('.quiz-result').html(resulText);
+}
 
 //This function handles the functionality to continue the quiz
 //once the user has seen the answer and proceed to the next question
@@ -161,7 +187,6 @@ function handleContinueToNextQuestion(){
         questionNum++;
 
         event.preventDefault();
-        console.log("Continue Button Clicked");
         $('.quiz-answer').fadeOut(200);
 
         //if the questionNum index is less that or equal to 9
@@ -171,6 +196,7 @@ function handleContinueToNextQuestion(){
             renderQuestion();
             $('.quiz-page').delay(200).fadeIn(200);
         }else{
+            renderQuizResult();
             $('.quiz-result').delay(200).fadeIn(200);
         } 
     });
@@ -182,12 +208,17 @@ function handleContinueToNextQuestion(){
 //where the application begins.
 function handleRetakeQuiz(){
 
-    $('.retake').on("click", function(event){
+    $('.quiz-result').on("click", ".retake", function(event){
 
         event.preventDefault();
-        console.log("Continue Button Clicked");
         $('.quiz-result').fadeOut(200);
 
+        // Set Global Values to thier defaults
+        questionNum = 0;
+        score = 0;
+        userAnswer = "";
+
+        //Go to the first screen
         $('.first-screen').delay(200).fadeIn(200);
 
     });

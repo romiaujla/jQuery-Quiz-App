@@ -139,7 +139,7 @@ fieldset{
     color: white;
 }
 .options-list-item input{
-    display: none;
+    /* display: none; */
 }
 .options-list-item-selected, .options-list-item-selected:hover{
     background: linear-gradient(to right, #11998e, #38ef7d);
