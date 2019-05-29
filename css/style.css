@@ -5,7 +5,8 @@
     letter-spacing: .1em;
 }
 
-body, p, div, ul, li, a, h1, h2, h3, h4, h5, h6{
+body, p, div, ul, li, a, h1, h2, h3, h4, h5, h6,
+form, fieldset{
     margin: 0;
     padding: 0;
 }
@@ -24,6 +25,10 @@ a{
 
 html, body{
     height:100%;
+}
+
+fieldset{
+    border: none;
 }
 
 /* Vertically Center Aligning the Main Content */
@@ -120,6 +125,7 @@ html, body{
     font-weight:800;
 }
 .options-list-item{
+    display: inline-block;
     width: 100%;
     border: 1px solid salmon;
     text-align: left;
@@ -132,7 +138,10 @@ html, body{
     background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
 }
-.options-list-item-selected{
+.options-list-item input{
+    display: none;
+}
+.options-list-item-selected, .options-list-item-selected:hover{
     background: linear-gradient(to right, #11998e, #38ef7d);
     color: white;
     border: none;
