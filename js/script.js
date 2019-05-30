@@ -47,7 +47,7 @@ function getQuestion(qNum){
                     Error: Please make one selection to proceed to the next question
                     </div>
                 </fieldset>
-            </form>`
+            </form>`;
 
 }
 
@@ -102,7 +102,7 @@ function getAnswerText(classTxt){
             <div class="answer">
                     ${QUIZDATA[questionNum].answertext}
             </div>
-            <button class="next-question app-buttons">Continue</button>`
+            <button class="next-question app-buttons">Continue</button>`;
 }
 
 //This function renders the page depending if the answer is 
@@ -155,25 +155,25 @@ function handlesSubmitAnswer(){
 function resultBasedText(){
     if(score === 0)
         return `Whoaaa!!! Did you do that on Purpose?? <br>
-                Why don't you give it a real try this time.`
+                Why don't you give it a real try this time.`;
     
     if(score >= 1 && score <= 4)
         return `You can definitely do better <br>
-                Why not give it another try?`
+                Why not give it another try?`;
 
     if(score >=5 && score <=7)
         return `You performance was decent <br>
                 But there is definitely room for improvement <br>
-                Want to try again?`
+                Want to try again?`;
 
     if(score >= 8 && score <=9)
         return `You almost made it to Perfection <br>
-                Want to try again to get a perfect 10?`
+                Want to try again to get a perfect 10?`;
     
     if(score === 10)
         return `CONGRATULATIONS !!! You nailed the quiz <br>
                 It's a perfet 10 for you. <br>
-                Would you like to retake the quiz?`
+                Would you like to retake the quiz?`;
 }
 
 //setting text for the result page with the 
