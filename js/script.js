@@ -28,19 +28,19 @@ function getQuestion(qNum){
                 <fieldset>
                     <label for="option-a" class="options-list-item" id="a">
                     <input type="radio" name="answer-option" id="option-a" value="${QUIZDATA[qNum].options[0]}" required>
-                    A. <span class="option-text">${QUIZDATA[qNum].options[0]}</span>
+                    <span class="option-text">${QUIZDATA[qNum].options[0]}</span>
                     </label>
                     <label for="option-b" class="options-list-item" id="b">
                     <input type="radio" name="answer-option" id="option-b" value="${QUIZDATA[qNum].options[1]}" required>
-                    B. <span class="option-text">${QUIZDATA[qNum].options[1]}</span>
+                    <span class="option-text">${QUIZDATA[qNum].options[1]}</span>
                     </label>
                     <label for="option-c" class="options-list-item" id="c">
                     <input type="radio" name="answer-option" id="option-c" value="${QUIZDATA[qNum].options[2]}" required>
-                    C. <span class="option-text">${QUIZDATA[qNum].options[2]}</span>
+                    <span class="option-text">${QUIZDATA[qNum].options[2]}</span>
                     </label>
                     <label for="option-d" class="options-list-item" id="d">
                     <input type="radio" name="answer-option" id="option-d" value="${QUIZDATA[qNum].options[3]}" required>
-                    D. <span class="option-text">${QUIZDATA[qNum].options[3]}</span>
+                    <span class="option-text">${QUIZDATA[qNum].options[3]}</span>
                     </label>
                     <button type="submit" class="submit-answer app-buttons">Submit Answer</button>
                     <div class="no-selection-error">
