@@ -113,11 +113,8 @@ fieldset{
     justify-content: space-between;
     border-bottom: 2px solid salmon;
 }
-.question-num{
-    padding: 20px;
-}
-.quiz-score{
-    padding: 20px;
+.top-section div{
+    padding: 10px 0px;
 }
 .question{
     font-size: 1.2rem;
@@ -133,6 +130,9 @@ fieldset{
     padding: 10px;
     font-size: .8rem;
     cursor: pointer;
+}
+.options-list-item input:hover{
+    background: #11998e;
 }
 .options-list-item:hover{
     background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -175,6 +175,7 @@ fieldset{
     background: #11998e;
 }
 .answer{
+    font-size: 0.8em;
     padding: 30px;
 }
 .next-question{
@@ -196,7 +197,7 @@ fieldset{
 }
 .score-circle{
     background: #11998e;
-    border-radius: 150px;
+    border-radius: 50%;
     color: white;
     width: 150px;
     height: 150px;
@@ -231,5 +232,11 @@ fieldset{
     }
     .options-list-item{
         font-size: 1rem;
+    }
+    .answer{
+        font-size: 1rem;
+    }
+    .top-section div{
+        padding: 20px;
     }
 }
