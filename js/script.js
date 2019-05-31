@@ -261,7 +261,7 @@ function handleQuizApp(){
     handlesSubmitAnswer();
     handleContinueToNextQuestion();
     handleRetakeQuiz();
-    
+        
 }
 
 $(handleQuizApp);

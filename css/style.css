@@ -90,6 +90,7 @@ fieldset{
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 800;
+    box-shadow: 3px 3px 5px lightgray;
 }
 .app-buttons:hover{
     background: crimson;
@@ -155,6 +156,7 @@ fieldset{
     margin: 0;
     -webkit-appearance: none;
     appearance: none;
+    outline: none;
     height: 12px;
     width: 12px;
     border: 2px solid lightgrey;
